@@ -10,11 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-
-print(os.getenv("APP_PASS"))
-print(os.getenv("MANAGEMENT_USER"))
-print(os.getenv("MANAGEMENT_PASS"))
-
 server = Flask(__name__)
 auth = HTTPBasicAuth()
 server.logger.setLevel(logging.INFO)
