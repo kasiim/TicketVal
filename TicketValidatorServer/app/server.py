@@ -127,7 +127,7 @@ def add():
         except Exception as e:
             server.logger.error(e)
 
-    return redirect("manage")
+    return redirect("http://193.40.245.62/validator/manage")
 
 @server.route("/delete", methods=['GET'])
 @auth.login_required
@@ -137,7 +137,7 @@ def delete():
     db.session.delete(card)
     db.session.add(ValidationLog(UID=delete_uid, status='deleted'))
     db.session.commit()
-    return redirect("manage")
+    return redirect("http://193.40.245.62/validator/manage")
 
 if __name__ == "__main__":
     server.run(host='0.0.0.0')
