@@ -1,13 +1,13 @@
 <html>
     <head></head>
     <body>
-        <form action="validator/add" method="POST" >
+        <form action="/add" method="POST" >
             <label for="uid">Card UID:</label><br>
             <input type="text" id="uid" name="uid"><br>
             <input type="submit">
         </form>
         Delete cards:
-        <form action="validator/delete" method="DELETE">
+        <form action="/delete" method="DELETE">
                 {%for i in range(0, len)%}
                 <button name="delete" type="submit" value="{{cards[i]}}">{{cards[i]}}</button><br>
                 {%endfor%}
